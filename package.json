@@ -1,0 +1,34 @@
+{
+  "name": "metalsmith-navigation",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/unstoppablecarl/metalsmith-navigation.git"
+  },
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "A metalsmith plugin for navigation",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec --slow 300"
+  },
+  "dependencies": {
+    "merge": "^1.1.3"
+  },
+  "devDependencies": {
+    "assert-dir-equal": "0.0.1",
+    "metalsmith": "0.x",
+    "mocha": "1.x",
+    "rimraf": "^2.2.8"
+  },
+  "bugs": {
+    "url": "https://github.com/unstoppablecarl/metalsmith-navigation/issues"
+  },
+  "homepage": "https://github.com/unstoppablecarl/metalsmith-navigation",
+  "maintainers": [
+    {
+      "name": "Unstoppable Carl",
+      "email": "unstoppablecarlolsen@gmail.com"
+    }
+  ],
+
+}
