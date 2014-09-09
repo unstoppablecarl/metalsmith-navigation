@@ -63,15 +63,21 @@ var navConfigs = {
         filterValue: false,
 
         /*
-        * if breadcrumb path data should begenerated and assigned to file objects
+        * the file object property that breadcrumb array is assigned to on each file object
+        * breadcrumbs not generated or set if false
         * typically only one navConfig should generate breadcrumbs, often one specifically for them
         */
-        breadcrumbs: true,
+        breadcrumbProperty: 'breadcrumb_path',
 
-        /*
-        * the file object property that breadcrumb array is assigned to on each file object
+        /**
+        * the file object property that the nav path is assigned to on each file object, not set if false
         */
-        breadcrumbProperty: 'breadcrumbPath',
+        pathProperty: 'nav_path',
+
+        /**
+        * the file object property that an array of nav child nodes will be assigned to
+        */
+        childrenProperty: 'nav_children',
 
         /*
         * if a file and sibling dir have matching names the file will be used as the parent in the nav tree
