@@ -4,7 +4,7 @@
     "type": "git",
     "url": "git://github.com/unstoppablecarl/metalsmith-navigation.git"
   },
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "description": "A metalsmith plugin for navigation",
   "main": "lib/index.js",

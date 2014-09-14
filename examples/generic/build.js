@@ -10,7 +10,8 @@ var markDown    = require('metalsmith-markdown');
 var templates   = require('metalsmith-templates');
 var assets      = require('metalsmith-assets');
 
-var navigation  = require('metalsmith-navigation');
+// var navigation  = require('metalsmith-navigation');
+var navigation = require('../../lib/index.js');
 
 var navConfigs = {
     primary:{
