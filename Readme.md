@@ -86,10 +86,9 @@ var navConfigs = {
         mergeMatchingFilesAndDirs: true,
 
         /*
-        * if dirs should be included as nav nodes
-        * has no effect if mergeMatchingFilesAndDirs = true
+        * if ALL dirs should be included as nav nodes
         */
-        includeDirs: true,
+        includeDirs: false,
     },
 
     // ...
