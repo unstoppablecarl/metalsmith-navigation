@@ -17,7 +17,7 @@
                 path === currentNavNode.path
                 (path property is set to all nav nodes)
             --}}
-            <a href="{{relative_path @root.nav_path nav_path}}">{{file.title}}</a>
+            <a href="{{relative_path @root.nav_path path}}">{{file.title}}</a>
         {{else}}
             {{name}}
         {{/if}}
