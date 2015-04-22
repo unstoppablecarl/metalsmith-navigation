@@ -79,7 +79,20 @@ var navConfigs = {
         breadcrumbProperty: 'breadcrumb_path',
 
         /**
-        * the file object property that the nav path is assigned to on each file object, not set if false
+        * each file's full nav path will be assigned to that file's metadata object using the value of propertyPath as the key.
+        * only assigned to file metadata objects of files included this navConfig
+        * if false will not be assigned to any objects.
+        * ex:
+        *   navConfigs: {
+        *       footer: {
+        *           pathProperty: 'my_nav_path'
+        *       }
+        *   };
+        *
+        *   // in the template of services/marketing/email.html
+        *   // my_nav_path == 'services/marketing/email.html'
+        *
+        * note: each navConfig can have a different pathProperty as file paths may be differerent in different nav configs.
         */
         pathProperty: 'nav_path',
 
