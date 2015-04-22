@@ -15,7 +15,8 @@
 {
   "plugins": {
     "metalsmith-navigation": {
-
+        navConfigs: {},
+        navSettings: {},
     }
   }
 }
@@ -49,16 +50,24 @@ var navConfigs = {
         /*
         * to be included in this nav config, a file's metadata[filterProperty] must equal filterValue
         * ex:
-        *   navConfigs key = 'footer'
-        *   filterProperty = 'nav_group'
-        *   files only added if files[path].nav_group == 'footer'
+        *   navConfigs = {
+        *       footer: {
+        *           filterProperty: 'my_nav_group'
+        *       }
+        *   }
+        *   file is only added to footer nav when files[path].my_nav_group == 'footer' OR files[path].my_nav_group.indexOf('footer') !== -1
         */
         filterProperty: false,
 
         /*
-        * if false nav name (navConfigs key) used instead
-        * if files[path][filterProperty] equals or contains (string or array containing) filterValue
-        * it will be included
+        * if false, nav name (navConfigs key) is used instead
+        * ex:
+        *   navConfigs = {
+        *       footer: {
+        *           filterValue: 'footer' // default value used if !navConfigs.footer
+        *       }
+        *   }
+        * if files[path][filterProperty] is a string that equals or an array that contains filterValue it will be included
         */
         filterValue: false,
 
@@ -91,7 +100,7 @@ var navConfigs = {
         includeDirs: false,
     },
 
-    // ...
+    // ... any number of navConfigs may be created
 
 };
 
@@ -110,9 +119,17 @@ var navSettings = {
     permalinks: false,
 };
 
-var nav = navigation(navConfig, navSettings);
+var nav = navigation(navConfigs, navSettings);
 
 metalsmith.use(nav);
+
+// OR use CLI syntax with single param
+
+var settings = {
+    navConfigs: navConfigs,
+    navSettings: navSettings,
+};
+var nav = navigation(settings);
 ```
 
 ## License
