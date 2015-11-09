@@ -64,7 +64,7 @@ var relativePathHelper = function(current, target) {
     current = path.normalize(current).slice(0);
     target = path.normalize(target).slice(0);
     current = path.dirname(current);
-    return path.relative(current, target);
+    return path.relative(current, target).replace(/\\/g, '/');
 };
 
 Handlebars.registerHelper('relative_path', relativePathHelper);
