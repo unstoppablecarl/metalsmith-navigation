@@ -16,7 +16,7 @@
   "plugins": {
     "metalsmith-navigation": {
         "navConfigs": {},
-        "navSettings": {},
+        "navSettings": {}
     }
   }
 }
