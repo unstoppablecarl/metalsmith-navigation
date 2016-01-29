@@ -48,6 +48,19 @@ var navConfigs = {
         sortByNameFirst: true,
 
         /*
+        * filter function used to filter files to be included in this nav
+        * ex:
+        *   var match = require('multimatch');
+        *
+        *   navConfigs = {
+        *       filter: function(fileName, file){
+        *           return match(filename, '**').length;
+        *       }
+        *   }
+        */
+        filter: false,
+
+        /*
         * to be included in this nav config, a file's metadata[filterProperty] must equal filterValue
         * ex:
         *   navConfigs = {
@@ -60,14 +73,8 @@ var navConfigs = {
         filterProperty: false,
 
         /*
+        * if files[path][filterProperty] is a string that equals or an array that contains `filterValue` it will be included
         * if false, nav name (navConfigs key) is used instead
-        * ex:
-        *   navConfigs = {
-        *       footer: {
-        *           filterValue: 'footer' // default value used if !navConfigs.footer
-        *       }
-        *   }
-        * if files[path][filterProperty] is a string that equals or an array that contains filterValue it will be included
         */
         filterValue: false,
 
