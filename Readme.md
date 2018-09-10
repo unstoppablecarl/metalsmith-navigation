@@ -102,6 +102,11 @@ var navConfigs = {
         childrenProperty: 'nav_children',
 
         /*
+        * find index in folder and merge it with parent folder
+        */
+        mergeIndexWithParentDir: false,
+        
+        /*
         * if a file and sibling dir have matching names the file will be used as the parent in the nav tree
         * ex: /foo /foo.html
         */
@@ -111,6 +116,11 @@ var navConfigs = {
         * if ALL dirs should be included as nav nodes
         */
         includeDirs: false,
+
+        /*
+        * should be set to true if you are using plugin metalsmith-clean-urls
+        */
+        cleanUrls: false,
     },
 
     // ... any number of navConfigs may be created
