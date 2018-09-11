@@ -102,6 +102,13 @@ var navConfigs = {
         childrenProperty: 'nav_children',
 
         /*
+        * find index.md in folder and merge it with parent folder. it is used also because plugin metalsmith-clean-urls
+        * eg: you have folder `about` and inside this folder is file `index.md`. in nav will be then only file `about/index.html` and no folder `about`
+        * also if you want to use this option make option `mergeMatchingFilesAndDirs` = false
+        */
+        mergeIndexWithParentDir: false,
+        
+        /*
         * if a file and sibling dir have matching names the file will be used as the parent in the nav tree
         * ex: /foo /foo.html
         */
@@ -111,6 +118,11 @@ var navConfigs = {
         * if ALL dirs should be included as nav nodes
         */
         includeDirs: false,
+
+        /*
+        * should be set to true if you are using plugin metalsmith-clean-urls
+        */
+        cleanUrls: false,
     },
 
     // ... any number of navConfigs may be created
