@@ -2,7 +2,7 @@
   "name": "generic-site-example",
   "private": true,
   "dependencies": {
-    "handlebars": "^3.0.3",
+    "handlebars": "^4.5.1",
     "lodash": "^2.4.1",
     "metalsmith": "^1.6.0",
     "metalsmith-assets": "^0.1.0",
